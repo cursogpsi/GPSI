@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão e Programação de Sistemas Informáticos | Escola Secundária de Oliveira do Bairro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-laptop-code text-blue-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-blue-600">GPSI - ESOB</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#sobre" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Sobre</a>
+                    <a href="#plano" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Plano Curricular</a>
+                    <a href="#professores" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Projetos</a>
+                 
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl mb-6">
+                        Gestão e Programação de Sistemas Informáticos
+                    </h1>
+                    <p class="text-xl text-blue-100 max-w-3xl mb-8">
+                        Prepare-se para o futuro com um curso prático que combina gestão de sistemas e desenvolvimento de software. Torne-se um profissional completo na área de TI.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        
+                        <a href="#sobre" class="border-2 border-white text-white hover:bg-blue-700 px-8 py-3 rounded-md text-lg font-semibold text-center">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80">
+                        <div class="absolute inset-0 bg-blue-400 rounded-full opacity-20 blur-xl"></div>
+                        <div class="relative floating">
+                            <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Programação" class="rounded-lg shadow-2xl border-4 border-white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="bg-gray-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="text-blue-600 text-4xl font-bold mb-2">3</div>
+                    <div class="text-gray-600 font-medium">Anos de Duração</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="text-blue-600 text-4xl font-bold mb-2">95%</div>
+                    <div class="text-gray-600 font-medium">Taxa de Empregabilidade</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="text-blue-600 text-4xl font-bold mb-2">Cerca de 20</div>
+                    <div class="text-gray-600 font-medium">Alunos por Turma</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="text-blue-600 text-4xl font-bold mb-2">100+</div>
+                    <div class="text-gray-600 font-medium">Horas de FCT</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="sobre" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Sobre o Curso</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Formação Completa em Tecnologias de Informação
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    O curso de Gestão e Programação de Sistemas Informáticos prepara os alunos para os desafios do mercado de trabalho na área de TI.
+                </p>
+            </div>
+
+            <div class="mt-20">
+                <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+                    <div>
+                        <img class="rounded-lg shadow-xl" src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80" alt="Estudantes de programação">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">O Que Vais Aprender</h3>
+                        <p class="text-gray-600 mb-6">
+                            Este curso técnico profissional combina conhecimentos teóricos e práticos em programação, gestão de sistemas, redes de computadores e bases de dados.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div class="flex items-center justify-center h-6 w-6 rounded-md bg-blue-600 text-white">
+                                        <i class="fas fa-check text-xs"></i>
+                                    </div>
+                                </div>
+                                <p class="ml-3 text-gray-700">
+                                    <span class="font-medium">Programação</span> - Desenvolvimento de aplicações em várias linguagens (Java, C#, ...)
+                                </p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div class="flex items-center justify-center h-6 w-6 rounded-md bg-blue-600 text-white">
+                                        <i class="fas fa-check text-xs"></i>
+                                    </div>
+                                </div>
+                                <p class="ml-3 text-gray-700">
+                                    <span class="font-medium">Bases de Dados</span> - Modelação e implementação de sistemas de gestão de dados
+                                </p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div class="flex items-center justify-center h-6 w-6 rounded-md bg-blue-600 text-white">
+                                        <i class="fas fa-check text-xs"></i>
+                                    </div>
+                                </div>
+                                <p class="ml-3 text-gray-700">
+                                    <span class="font-medium">Redes e Sistemas</span> - Configuração e manutenção de redes e sistemas operativos
+                                </p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div class="flex items-center justify-center h-6 w-6 rounded-md bg-blue-600 text-white">
+                                        <i class="fas fa-check text-xs"></i>
+                                    </div>
+                                </div>
+                                <p class="ml-3 text-gray-700">
+                                    <span class="font-medium">Gestão de Projetos</span> - Metodologias ágeis e gestão de equipas de desenvolvimento
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Curriculum Section -->
+    <div id="plano" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Plano Curricular</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Plano de Formação
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Todas as matérias que vais aprender durante o curso (Com a respectiva hora).
+                </p>
+            </div>
+
+            <div class="mt-12">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <!-- Year 1 -->
+                    <div class="course-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                        <div class="px-6 py-4 bg-blue-600">
+                            <h3 class="text-lg font-semibold text-white">Componente Sociocultural</h3>
+                        </div>
+                        <div class="p-6">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                    <span>Português - 320h</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                    <span>Língua Estrangeira - 220h</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                    <span>Área de Integração - 220h</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                    <span>Educação Física - 140h</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                    <span>TIC - 100h </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Year 2 -->
+                    <div class="course-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                        <div class="px-6 py-4 bg-blue-600">
+                            <h3 class="text-lg font-semibold text-white">Componente Científica</h3>
+                        </div>
+                        <div class="p-6">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                    <span>Matemática - 300h</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                    <span>Físico-Química - 200h</span>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Year 3 -->
+                    <div class="course-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                        <div class="px-6 py-4 bg-blue-600">
+                            <h3 class="text-lg font-semibold text-white">Componente Tecnológica</h3>
+                        </div>
+                        <div class="p-6">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                    <span>Programação e Sistemas de Informação - 606h</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                    <span>Redes de Comunicação - 295h</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                    <span>Arquitetura de Computadores - 147h</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                    <span>Sistemas Operativos - 132h</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                    <span>Formação em Contexto de Trabalho - </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Curriculum Section -->
+        <div id="plano" class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Plano Curricular</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        Conteúdos Programáticos
+                    </p>
+                    <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                        Um currículo abrangente que cobre todas as áreas essenciais da informática.
+                    </p>
+                </div>
+    
+                <div class="mt-12">
+                    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                        <!-- Year 1 -->
+                        <div class="course-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                            <div class="px-6 py-4 bg-blue-600">
+                                <h3 class="text-lg font-semibold text-white">1º Ano</h3>
+                            </div>
+                            <div class="p-6">
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span>Introdução à Programação</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span>Arquitetura de Computadores</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span>Sistemas Operativos</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span>Matemática Discreta</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span>Inglês Técnico</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Year 2 -->
+                        <div class="course-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                            <div class="px-6 py-4 bg-blue-600">
+                                <h3 class="text-lg font-semibold text-white">2º Ano</h3>
+                            </div>
+                            <div class="p-6">
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span>Programação Orientada a Objetos</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span>Bases de Dados</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span>Redes de Computadores</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span>Desenvolvimento Web</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span>Segurança Informática</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Year 3 -->
+                        <div class="course-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                            <div class="px-6 py-4 bg-blue-600">
+                                <h3 class="text-lg font-semibold text-white">3º Ano</h3>
+                            </div>
+                            <div class="p-6">
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span>Gestão de Sistemas Informáticos</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span>Programação Avançada</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span>Projeto Final</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span>Formação em Contexto de Trabalho</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                        <span>Empreendedorismo</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+
+    <!-- Facilities Section -->
+    <div class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Projetos</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Projetos Realizados
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Por alunos do curso
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1565687981296-535f09db714e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Laboratório de Informática">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Desenvolvimento de Jogos</h3>
+                        <p class="mt-2 text-gray-600">
+                            Jogos Variados desde jogos educativos como Quizes , jogo da memória , etc. Até jogos mais desenvolvidos como Flappy Bird , RPGs , etc.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Laboratório de Redes">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Desenvolvimento de Aplicações Variadas</h3>
+                        <p class="mt-2 text-gray-600">
+                            Aplicações como geradores de senhas , calculadoras, tradutores , sistemas de gerenciamento , desenvolvimento de páginas web , etc.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Opiniões</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    O Que Dizem Nossos Alunos
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img class="w-12 h-12 rounded-full" src="https://plus.unsplash.com/premium_vector-1721131162360-08b11ad43827?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Aluna">
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900">Kauã Oliveira</h4>
+                            <p class="text-blue-600">Aluno do 11º ano</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Entrei no curso sem saber nada de programação , mas com muito apoio dos professores e colegas da turma, hoje estou desenvolvendo meus próprios jogos , sites , aplicativos . é incrível !"
+                    </p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img class="w-12 h-12 rounded-full" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Aluno">
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900">João Pereira</h4>
+                            <p class="text-blue-600">Desenvolvedor Júnior</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Consegui emprego como programador logo após terminar o curso. A formação em contexto de trabalho foi decisiva!"
+                    </p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img class="w-12 h-12 rounded-full" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80" alt="Aluna">
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900">Inês Fernandes</h4>
+                            <p class="text-blue-600">Técnica de Sistemas</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Os conhecimentos em redes e sistemas que adquiri no curso permitiram-me entrar diretamente no mercado de trabalho."
+                    </p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Escola Secundária de Oliveira do Bairro</h3>
+                    <p class="text-gray-400">
+                        Juntos preparamos o futuro.
+                    </p>
+                    
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contactos</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            <span> R. Colégios <br>3770-855 Oliveira do Bairro</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2"></i>
+                            <span>+351 234 740 030</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2"></i>
+                            <span>info@escolasecundaria.pt</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Horário de Atendimento</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Segunda a Sexta: 9h00 - 18h00</li>
+                        <li>Sábado: 9h00 - 13h00</li>
+                        <li>Domingo: Encerrado</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2025 Escola Secundária de Oliveira do Bairro. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.parentElement.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                if (answer.classList.contains('hidden')) {
+                    answer.classList.remove('hidden');
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    answer.classList.add('hidden');
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
